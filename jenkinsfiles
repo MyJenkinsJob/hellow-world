@@ -3,7 +3,7 @@ node {
   def mvnHome = tool name: 'myMaven04', type: 'maven'
   
   stage ('CodeCheckout'){
-    checkout([$class: 'GitSCM', branches: [[name: '*/development']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/MyJenkinsJob/hellow-world']]])
+    checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/MyJenkinsJob/hellow-world']]])
   }
   
   stage ('packageApplication'){
